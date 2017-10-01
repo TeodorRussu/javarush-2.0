@@ -1,5 +1,7 @@
 package com.javarush.task.task08.task0812;
 
+import jdk.nashorn.internal.ir.CatchNode;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -24,6 +26,35 @@ Cамая длинная последовательность
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
+        ArrayList<Integer> numbers = new ArrayList<>();
 
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int consec = 1;
+        int counter = 1;
+
+        for (int i = 0; i<10; i++){
+            try{
+                int num = new Integer(reader.readLine());
+                numbers.add(num);
+
+                if(i!=0){
+                    if (num==numbers.get(i-1)) {
+                        counter++;
+                        if(consec< counter)
+                            consec = counter;
+                    }
+                    else{
+                        if (consec<counter)
+                            consec = counter;
+                        counter = 1;
+                    }
+                }
+            }
+            catch (NumberFormatException e){
+                i--;
+                continue;
+            }
+        }
+        System.out.println(consec);
     }
 }
