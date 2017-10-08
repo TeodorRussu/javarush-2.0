@@ -17,6 +17,11 @@ public class Solution {
 
     }
 
+    public interface Fly {
+        void fly1();
+        int fheight();
+    }
+
     //add an interface here - добавь интерфейс тут
 
 }
