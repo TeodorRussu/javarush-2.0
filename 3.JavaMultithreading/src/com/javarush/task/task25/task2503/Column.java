@@ -3,7 +3,11 @@ package com.javarush.task.task25.task2503;
 import java.util.LinkedList;
 import java.util.List;
 
+<<<<<<< HEAD
 public enum Column implements Columnable {
+=======
+public enum Column implements Columnable{
+>>>>>>> 7defc761c64c11807484c27048e1438b8af48d88
     Customer("Customer"),
     BankName("Bank Name"),
     AccountNumber("Account Number"),
@@ -11,6 +15,7 @@ public enum Column implements Columnable {
 
     private String columnName;
 
+<<<<<<< HEAD
     @Override
     public String getColumnName() {
         return this.columnName;
@@ -34,6 +39,8 @@ public enum Column implements Columnable {
     }
 
 
+=======
+>>>>>>> 7defc761c64c11807484c27048e1438b8af48d88
     private static int[] realOrder;
 
     private Column(String columnName) {
@@ -73,6 +80,7 @@ public enum Column implements Columnable {
      */
     public static List<Column> getVisibleColumns() {
         List<Column> result = new LinkedList<>();
+<<<<<<< HEAD
         Column[] list = Column.values();
         for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < list.length; j++){
@@ -86,3 +94,25 @@ public enum Column implements Columnable {
         return result;
     }
 }
+=======
+
+        return result;
+    }
+
+    @Override
+    public String getColumnName() {
+        return null;
+    }
+
+    @Override
+    public boolean isShown() {
+        if ()
+        return false;
+    }
+
+    @Override
+    public void hide() {
+
+    }
+}
+>>>>>>> 7defc761c64c11807484c27048e1438b8af48d88
