@@ -1,16 +1,10 @@
 package com.javarush.task.task31.task3101;
 
-<<<<<<< HEAD
-/* 
-Проход по дереву файлов
-*/
-public class Solution {
-    public static void main(String[] args) {
 
-=======
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -36,7 +30,7 @@ public class Solution {
             fileNames.add(f.getName());
         Collections.sort(fileNames);
 
-        try( FileOutputStream out = new FileOutputStream(dest);) {
+        try(FileOutputStream out = new FileOutputStream(dest);) {
             for (String s : fileNames)
                 out.write((s + "\n").getBytes());
         }
@@ -56,6 +50,5 @@ public class Solution {
             }
 
         }
->>>>>>> 7defc761c64c11807484c27048e1438b8af48d88
     }
 }
